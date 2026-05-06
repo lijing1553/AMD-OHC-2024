@@ -1,8 +1,8 @@
-# RoCE Balboa - Payload-based Intrusion Detection for RDMA-traffic with ML-models
-Our contribution to the AMD Open Hardware Contest: A ML-based Deep Packet Inspection for RDMA-networking on FPGAs.
+# Payload-based Intrusion Detection for RDMA-traffic with ML-models
+Adopted artifact for ML-based Deep Packet Inspection with CREED, our open-source RDMA stack for OSDI 2026. 
 
 ## General description of the project 
-Building on the open-sourced Coyote-shell (https://github.com/fpgasystems/Coyote/tree/coyote_v1) and the also open-sourced fully RoCE-v2 compatible RDMA-networking stack for FPGAs (https://github.com/fpgasystems/fpga-network-stack) our contribution to the Open Hardware Competition 2024 is a Machine-Learning based Deep Packet Inspection for RDMA on FPGAs, that directly addresses some of the most prominent security flaws of the RoCE-protocol and leverages the stream-processing capabilities of reconfigurable architectures. As a result, our design is reliable in the detection of x86-executables in RDMA-payloads at linerate in 100 Gbps-networks. 
+We demonstrate a Machine-Learning based Deep Packet Inspection for RDMA on FPGAs, that directly addresses some of the most prominent security flaws of the RoCE-protocol and leverages the stream-processing capabilities of reconfigurable architectures. As a result, our design is reliable in the detection of x86-executables in RDMA-payloads at linerate in 100 Gbps-networks. 
 
 RDMA (Remote Direct Memory Access) was originally developed as networking protocol for High-Performance Computing. Later, it found widespread usage in cloud computing, especially as RDMA over Converged Ethernet (RoCE). However, its background in the trustworthy domain of HPC and the essential RDMA-feature of OS-bypassing turn this protocol into a potential threat in public cloud settings. Our idea is to move central aspects of access control - in this case the prevention of transmission of potentially malicious executables - in the FPGA-based NICs to combine the original performance-advantages of RDMA with a higher level of security and control for the user. 
 
@@ -13,7 +13,6 @@ The main contributions of this project include the selection of adequate Machine
 </picture>
 
 Thus, our main contribution is the integration of a Ml-based DPI for the detection of potentially malicious executables in packet payloads at line rate in network traffic. The relevant added files to the existing design can be found at `/artifacts/coyote-experiments/hw/hdl/network/rdma` and include `intrusion_detection_decider.sv`, `common/payload_extractor.sv` and all the `myproject_*.sv`-files. Adaptations were necessary to `roce_stack.sv` as well as for the HLS-implementation of the RDMA-packet processing pipeline in `/artifacts/coyote-experiments/hw/services/network/hls/rocev2`. 
-As required for this competition, we paid great attention to the "openness" and re-usability of our design: Since our hardware-stack communicates via the standardized AXI4-Stream-interface at 512 Bit width and looks at raw payloads to generally detect x86-executables, it can easily be adopted to any kind of FPGA-based networking stack for Deep Packet Inspection as well as in other security-related domains of data-stream computing. 
 
 ## Hardware Prerequisites 
 Since this project is built around a networking service, at least two connected servers are required for the replication of our experiments. Switched networks are acceptable and have been extensively tested. The targeted FPGA-platform is a `Alveo U55C`-accelerator card, connected via PCIe to the server. For our experiments about the cross-compatibility of our design in heterogeneous networking setups a dedicated ASIC-based NIC is required - our provided programs and scripts target a `Mellanox Connect-X5` card. 
