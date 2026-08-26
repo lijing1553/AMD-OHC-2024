@@ -52,6 +52,14 @@ exec cp "$hw_dir/sim/tb_templates/tb_design_user_logic.sv" "$sim_dir/hdl"
 exec cp "$hw_dir/sim/tb_templates/c_gen.svh" "$sim_dir/hdl"
 exec cp "$hw_dir/sim/tb_templates/c_scb.svh" "$sim_dir/hdl"
 exec cp "$hw_dir/sim/tb_templates/c_struct.sv" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_trs.svh" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_axil.svh" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_axi.svh" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_meta.svh" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_drv.svh" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_mon.svh" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_env.svh" "$sim_dir/hdl"
+exec cp "$hw_dir/sim/tb_env/c_tbench.sv" "$sim_dir/hdl"
 
 # Call write HDL scripts
 unset ::env(PYTHONPATH)
