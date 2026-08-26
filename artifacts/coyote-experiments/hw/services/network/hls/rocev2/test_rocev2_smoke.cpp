@@ -43,7 +43,7 @@ int main()
     ap_uint<32> regIbvCountRx = 0;
     ap_uint<32> regIbvCountTx = 0;
 
-    rocev2<DATA_WIDTH>(
+    rocev2<DATA_WIDTH, 0>(
         s_axis_rx_data,
         m_axis_tx_data,
         s_axis_sq_meta,
