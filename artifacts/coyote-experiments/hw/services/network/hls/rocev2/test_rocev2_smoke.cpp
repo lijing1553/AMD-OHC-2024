@@ -70,6 +70,7 @@ int main()
         tx_iumm_dstQpFifo_debug,
         tx_exhfsm_qpn_debug,
         intrusionDecisionIn,
+        m_axis_dbg,
         regCrcDropPkgCount,
         regInvalidPsnDropCount,
         regRetransCount,
