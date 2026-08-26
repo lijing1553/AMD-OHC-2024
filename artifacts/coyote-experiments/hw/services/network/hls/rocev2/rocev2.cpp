@@ -346,7 +346,7 @@ void rocev2_top(
 
 	convert_net_axis_to_axis<DATA_WIDTH>(m_axis_mem_write_data_internal, m_axis_mem_write_data);
 
-   	rocev2<DATA_WIDTH>(			
+   	rocev2<DATA_WIDTH, 0>(			
 	   	s_axis_rx_data_internal,
 		m_axis_tx_data_internal,
 								
@@ -501,7 +501,7 @@ void rocev2_top(
 
 	#pragma HLS INTERFACE ap_vld port=regCrcDropPkgCount
 
-   rocev2<DATA_WIDTH>(			
+   rocev2<DATA_WIDTH, 0>(			
 	   	s_axis_rx_data,
 		m_axis_tx_data,
 								
