@@ -93,3 +93,4 @@ set cfg(n_strm_axi)     ${N_STRM_AXI}
 set cfg(mult_regions)   ${MULT_REGIONS}
 set cfg(mult_ddr_chan)  ${MULT_DDR_CHAN}
 set cfg(mult_strm_axi)  ${MULT_STRM_AXI}
+set cfg(trace)       ${EN_TRACE}

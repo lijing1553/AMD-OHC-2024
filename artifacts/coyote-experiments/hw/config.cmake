@@ -4,6 +4,23 @@
 
 ## General
 
+if(EXAMPLE STREQUAL "rdma2")
+    message("** RDMA, example")
+    set(FDEV_NAME "u50")
+    set(N_REGIONS 1)
+    set(EN_PR 0)
+    set(EN_MB 1)
+    set(EN_MEM 1)
+    set(AV_HBM 1)
+    set(EN_STRM 1)
+    set(EN_RDMA_0 1)
+    set(EN_HLS 1)
+    # set(N_RDMA_AXI 2)
+    set(N_CARD_AXI 4)
+    set(COMP_CORES 8)
+    set(EN_TRACE 1)
+endif()
+
 # Max supported regions
 set(MULT_REGIONS 0)
 if(N_REGIONS GREATER 1)
@@ -29,7 +46,7 @@ endif()
 
 # RDMA stack
 if(EN_RDMA_0 OR EN_RDMA_1)
-    set(ROCE_STACK_EN 1 CACHE BOOL "RDMA stack disabled.")
+    set(ROCE_STACK_EN 1 CACHE BOOL "RDMA stack enabled.")
     set(EN_RDMA 1)
 else()
     set(ROCE_STACK_EN 0 CACHE BOOL "RDMA stack disabled.")

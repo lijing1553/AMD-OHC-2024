@@ -48,7 +48,7 @@ logic switch_output;
 logic [511:0] bitmask; 
 
 // Parameter for the header length
-param logic []
+parameter logic []
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,7 +56,7 @@ param logic []
 // Assignment of d for CRC-calculation to stage_1_bitmasked data
 //
 /////////////////////////////////////////////////////////////////////////////////////////////
-assign d = stage_1_bitmasked; 
+assign d = stage_1_masked_data; 
 assign c = stage_2_crc_value;   
 
 always_ff @(posedge nclk) begin

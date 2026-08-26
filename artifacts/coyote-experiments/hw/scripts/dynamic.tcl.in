@@ -28,12 +28,12 @@ file mkdir "$proj_dir/hdl/wrappers/config_$cn"
 unset ::env(PYTHONPATH)
 unset ::env(PYTHONHOME)
 proc call_write_hdl {r_path i} {
-    set output [exec python3 "$r_path/write_hdl.py" 1 $i]
+    set output [exec /usr/bin/python3 "$r_path/write_hdl.py" 1 $i]
     puts $output
 }
 call_write_hdl $build_dir $cn
 
-#source "$scripts_dir/wr_hdl/wr_hdl_user.tcl" -notrace
+source "$scripts_dir/wr_hdl/wr_hdl_user.tcl"
 #for {set j 0}  {$j < $cfg(n_reg)} {incr j} {
 #    wr_hdl_user_wrapper "$proj_dir/hdl/wrappers/config_$cn/design_user_wrapper_c$cn\_$j.sv" $j
 #    wr_hdl_user "$proj_dir/hdl/config_$cn/design_user_logic_c$cn\_$j.sv" $j

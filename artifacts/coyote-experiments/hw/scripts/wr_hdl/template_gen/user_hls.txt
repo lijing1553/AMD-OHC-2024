@@ -126,7 +126,7 @@ void design_user_hls_c{{ c_cnfg }}_{{ c_reg }}_top (
 {% if cnfg.en_mem %}
     {% for i in range(0, cnfg.n_card_axi) %}
     #pragma HLS INTERFACE axis register port=axis_card_{{i}}_sink name=s_axis_card_{{i}}_sink
-    #pragma HLS INTERFACE axis register port=axis_card_{{I}}_src name=m_axis_card_{{i}}_src
+    #pragma HLS INTERFACE axis register port=axis_card_{{i}}_src name=m_axis_card_{{i}}_src
     {% endfor %}
 
 {% endif %}

@@ -120,7 +120,7 @@ puts "****"
 # CUSTOM SCRIPTS
 ########################################################################################################
 if {$cfg(sim_path) != "0"} {
-    source "${SIM_SCR_PATH}" -notrace
+    source "${SIM_SCR_PATH}"
 
     puts "**** Custom sim script"
     puts "****"

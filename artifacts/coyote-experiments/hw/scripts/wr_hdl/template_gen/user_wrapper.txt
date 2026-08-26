@@ -695,12 +695,12 @@ module design_user_wrapper_{{ c_reg }} (
         .s_axis_card_{{i}}_sink_TLAST(axis_card_sink[{{i}}].tlast),
         .s_axis_card_{{i}}_sink_TVALID(axis_card_sink[{{i}}].tvalid),
         .s_axis_card_{{i}}_sink_TREADY(axis_card_sink[{{i}}].tready),
-        .m_axis_card_{{i}}_src_TDATA(axis_card_{{i}}_src.tdata),
-        .m_axis_card_{{i}}_src_TKEEP(axis_card_{{i}}_src.tkeep),
-        .m_axis_card_{{i}}_src_TID(axis_card_{{i}}_src.tid),
-        .m_axis_card_{{i}}_src_TLAST(axis_card_{{i}}_src.tlast),
-        .m_axis_card_{{i}}_src_TVALID(axis_card_{{i}}_src.tvalid),
-        .m_axis_card_{{i}}_src_TREADY(axis_card_{{i}}_src.tready),
+        .m_axis_card_{{i}}_src_TDATA(axis_card_src[{{i}}].tdata),
+        .m_axis_card_{{i}}_src_TKEEP(axis_card_src[{{i}}].tkeep),
+        .m_axis_card_{{i}}_src_TID(axis_card_src[{{i}}].tid),
+        .m_axis_card_{{i}}_src_TLAST(axis_card_src[{{i}}].tlast),
+        .m_axis_card_{{i}}_src_TVALID(axis_card_src[{{i}}].tvalid),
+        .m_axis_card_{{i}}_src_TREADY(axis_card_src[{{i}}].tready),
         {% endfor %}
     {% endif %}
 	{% if cnfg.en_rdma_0 %}
@@ -884,12 +884,12 @@ module design_user_wrapper_{{ c_reg }} (
         .s_axis_card_{{i}}_sink_TLAST(axis_card_sink[{{i}}].tlast),
         .s_axis_card_{{i}}_sink_TVALID(axis_card_sink[{{i}}].tvalid),
         .s_axis_card_{{i}}_sink_TREADY(axis_card_sink[{{i}}].tready),
-        .m_axis_card_{{i}}_src_TDATA(axis_card_{{i}}_src.tdata),
-        .m_axis_card_{{i}}_src_TKEEP(axis_card_{{i}}_src.tkeep),
-        .m_axis_card_{{i}}_src_TID(axis_card_{{i}}_src.tid),
-        .m_axis_card_{{i}}_src_TLAST(axis_card_{{i}}_src.tlast),
-        .m_axis_card_{{i}}_src_TVALID(axis_card_{{i}}_src.tvalid),
-        .m_axis_card_{{i}}_src_TREADY(axis_card_{{i}}_src.tready),
+        .m_axis_card_{{i}}_src_TDATA(axis_card_src[{{i}}].tdata),
+        .m_axis_card_{{i}}_src_TKEEP(axis_card_src[{{i}}].tkeep),
+        .m_axis_card_{{i}}_src_TID(axis_card_src[{{i}}].tid),
+        .m_axis_card_{{i}}_src_TLAST(axis_card_src[{{i}}].tlast),
+        .m_axis_card_{{i}}_src_TVALID(axis_card_src[{{i}}].tvalid),
+        .m_axis_card_{{i}}_src_TREADY(axis_card_src[{{i}}].tready),
         {% endfor %}
     {% endif %}
 	{% if cnfg.en_rdma_0 %}

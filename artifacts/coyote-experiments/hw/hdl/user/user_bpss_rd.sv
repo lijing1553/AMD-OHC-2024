@@ -59,6 +59,6 @@ end
 metaIntf #(.STYPE()) mux_rd ();
 
 user_mux_rd #(.N_CPID(N_CPID)) inst_mux_rd (.aclk(aclk), .aresetn(aresetn), .mux(mux_rd), .s_axis(s_axis),  .m_axis(axis_s0));
-user_arbiter #(.N_CPID(N_CPID)) inst_arb_rd (.aclk(aclk), .aresetn(aresetn), .s_meta(cred_req), .m_meta(m_req),  .mux(mux_rd)); );
+user_arbiter #(.N_CPID(N_CPID)) inst_arb_rd (.aclk(aclk), .aresetn(aresetn), .s_meta(cred_req), .m_meta(m_req),  .mux(mux_rd));
     
 endmodule

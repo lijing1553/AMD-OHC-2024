@@ -56,7 +56,7 @@ queue_meta #(
     .m_meta(seq_rd),
     .aclk(aclk),
     .aresetn(aresetn)
-)
+);
 
 // REG
 always_ff @(posedge aclk) begin: PROC_REG

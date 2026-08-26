@@ -2,3 +2,6 @@
 __pycache__
 
 
+.vscode
+artifacts/coyote-experiments/build
+artifacts/coyote-experiments/hw/build
