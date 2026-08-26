@@ -53,7 +53,7 @@ module tb_user;
     AXI4SR axis_card_src (aclk);
     AXI4SR axis_card_sink (aclk);
 
-    tbench inst_axis_card(axis_card_sink, axis_card_src, STRM_CARD, params);
+    c_env axis_card_drv = new(axis_card_sink, axis_card_src, STRM_CARD, params);
 `endif
 `ifdef EN_RDMA_0
     metaIntf #(.STYPE(req_t)) rdma_0_rd_req (aclk);
