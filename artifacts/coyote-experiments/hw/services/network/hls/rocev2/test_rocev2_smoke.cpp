@@ -35,6 +35,7 @@ int main()
     stream<ap_uint<24> > tx_iumm_dstQpFifo_debug("tx_iumm_dstQpFifo_debug");
     stream<ap_uint<16> > tx_exhfsm_qpn_debug("tx_exhfsm_qpn_debug");
     stream<intrusionDecision> intrusionDecisionIn("intrusionDecisionIn");
+    stream<psnPkg> m_axis_dbg("m_axis_dbg");
 
     ap_uint<32> regCrcDropPkgCount = 0;
     ap_uint<32> regInvalidPsnDropCount = 0;
