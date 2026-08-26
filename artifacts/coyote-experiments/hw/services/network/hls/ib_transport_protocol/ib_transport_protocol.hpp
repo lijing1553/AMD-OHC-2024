@@ -639,6 +639,7 @@ struct psnPkg
 
 	psnPkg(ap_uint<4> ctl, ap_uint<24> psn, ap_uint<24> epsn, ibOpCode op_code) 
 		: ctl(ctl), psn(psn), epsn(epsn), op_code(op_code)  {}
+	psnPkg() : ctl(0), psn(0), epsn(0), op_code(RC_SEND_ONLY) {}
 };
 
 struct rtrPkg
